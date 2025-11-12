@@ -22,16 +22,16 @@ public static void main(String[] args) {
 		System.out.printf("Escribe \"true\" si quieres las posiciones pares o \"false\" si quieres las impares\n");
 		posicion= kb.nextBoolean();
 		
-		for(int i=0; i<elements.length; i++) {
+		for(int i=0; i<elements.length; i++) { //recorre el array hasta el final
 			
-			if(posicion) {
-				if(i%2==0) {
+			if(posicion) { //si posicion es true 
+				if(i%2==0) { //si la posicion es par
 					System.out.printf("Posicion %d: %d\n", i, elements[i]);
 					
 				}
 				
-			}else {
-				if(i%2!=0) {
+			}else { //si posicion es false
+				if(i%2!=0) { //si la posicion es impar
 					System.out.printf("Posicion %d: %d\n", i, elements[i]);
 				}
 				
