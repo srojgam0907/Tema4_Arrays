@@ -17,14 +17,14 @@ public static void main(String[] args) {
 		@SuppressWarnings("resource")
 		Scanner kb= new Scanner(System.in);
 		int[] elements= {21, 45, 7, 3, 52, 61};
-		boolean posicion;
+		boolean position;
 		
 		System.out.printf("Escribe \"true\" si quieres las posiciones pares o \"false\" si quieres las impares\n");
-		posicion= kb.nextBoolean();
+		position= kb.nextBoolean();
 		
 		for(int i=0; i<elements.length; i++) { //recorre el array hasta el final
 			
-			if(posicion) { //si posicion es true 
+			if(position) { //si posicion es true 
 				if(i%2==0) { //si la posicion es par
 					System.out.printf("Posicion %d: %d\n", i, elements[i]);
 					
