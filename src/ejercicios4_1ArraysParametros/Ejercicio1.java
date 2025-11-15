@@ -12,16 +12,16 @@ public class Ejercicio1 {
 	}
 	
 	public void show() {
-		System.out.println(add(2,2,2));
+		System.out.println(add(2,2,2)); //Llama al metodo add con un varargs de numeros
 		
 		
 	}
 	
-	public int add(int... nums) {
+	public int add(int... nums) { //El metodo trata el vararg como un array normal
 		int multi=1;
 		 
 		for(int i=0; i< nums.length; i++) {
-			multi*= nums[i]; 
+			multi*= nums[i]; //Multiplica los numeros
 			
 		}
 		
