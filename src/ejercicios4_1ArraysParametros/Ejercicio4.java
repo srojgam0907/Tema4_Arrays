@@ -1,6 +1,5 @@
 package ejercicios4_1ArraysParametros;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Ejercicio4 {
@@ -27,7 +26,7 @@ public class Ejercicio4 {
 		
 		numbers= new int [length];
 		
-		for(int i=0; i<length; i++) {
+		for(int i=0; i<length; i++) { //El usuario rellena el array
 			System.out.printf("Introduce un numeros para la posición %d\n", i+1);
 			value= kb.nextInt();
 			numbers[i]= value;
@@ -45,7 +44,7 @@ public class Ejercicio4 {
 		int contador=0;
 		
 		for(int i=0; i<numbers.length; i++) {
-			if(numbers[i] == num) {
+			if(numbers[i] == num) {//Si el elemento de la posicion i es igual que num
 				contador++; 
 				
 				if(contador==1) {
@@ -58,7 +57,7 @@ public class Ejercicio4 {
 			}
 		}
 		
-		if (contador==0) {
+		if (contador==0) { //Si no se encuentra el numero
 			System.out.println("Ese numero no aparece"); 
 			
 		}else {
