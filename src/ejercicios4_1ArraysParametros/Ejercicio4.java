@@ -1,5 +1,8 @@
 package ejercicios4_1ArraysParametros;
 
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class Ejercicio4 {
 
 	public static void main(String[] args) {
@@ -14,6 +17,63 @@ public class Ejercicio4 {
 	}
 
 	public void show() {
+		@SuppressWarnings("resource")
+		Scanner kb= new Scanner(System.in);
+		int[] numbers;
+		int num, length, value;
+		
+		System.out.println("¿cuántos números tiene el array?");
+		length= kb.nextInt();
+		
+		numbers= new int [length];
+		
+		for(int i=0; i<length; i++) {
+			System.out.printf("Introduce un numeros para la posición %d\n", i+1);
+			value= kb.nextInt();
+			numbers[i]= value;
+			
+		}
+		
+		System.out.println("¿Qué número quieres buscar?");
+		num= kb.nextInt();
+		
+		buscarNumero(numbers, num);
 		
 	}
+	
+	public void buscarNumero(int[] numbers, int num) {
+		int contador=0;
+		
+		for(int i=0; i<numbers.length; i++) {
+			if(numbers[i] == num) {
+				contador++; 
+				
+				if(contador==1) {
+					System.out.printf("Ese valor está en las posiciones %d", i);
+					
+				}else {
+					System.out.printf(", %d", i);
+					
+				}
+			}
+		}
+		
+		if (contador==0) {
+			System.out.println("Ese numero no aparece"); 
+			
+		}else {
+			System.out.printf("\nEl numero %d aparece %d veces", num, contador);
+			
+		}	
+	}
 }
+
+
+
+
+
+
+
+
+
+
