@@ -21,7 +21,7 @@ public class Ejercicio1 {
 		int multi=1;
 		 
 		for(int i=0; i< nums.length; i++) {
-			multi*= nums[i]; //Multiplica los numeros
+			multi*= nums[i]; //Multiplica los numeros 
 			
 		}
 		
