@@ -21,6 +21,7 @@ public class Ejercicio2 {
 		
 		modificarArray(numbers);
 		
+		System.out.println("Array cambiado: " + Arrays.toString(numbers));
 		
 	}
 	
@@ -31,8 +32,6 @@ public class Ejercicio2 {
 				
 			}
 		}
-		
-		System.out.println("Array cambiado: " + Arrays.toString(numbers));
 
 	}
 
