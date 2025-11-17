@@ -12,7 +12,20 @@ public class Ejercicio3 {
 	}
 	
 	public void show() {
+		int[] numbers= {2,2,2};
+		System.out.println(sumar(numbers)); //Llama al metodo sumar con un array de enteros
 		
+	}
+	
+	public int sumar(int[] nums) { 
+		int sum=0;
+		 
+		for(int i=0; i< nums.length; i++) {
+			sum+= nums[i]; //Suma los numeros 
+			
+		}
+		
+		return sum;
 	}
 
 }
