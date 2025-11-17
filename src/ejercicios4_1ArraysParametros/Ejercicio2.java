@@ -1,4 +1,5 @@
 package ejercicios4_1ArraysParametros;
+import java.util.*;
 
 public class Ejercicio2 {
 
@@ -16,8 +17,7 @@ public class Ejercicio2 {
 	public void show() {
 		int[] numbers= {2, 5, 8};
 		
-		System.out.println("Array sin cambiar: ");
-		numbers.toString();
+		System.out.println("Array sin cambiar: " + Arrays.toString(numbers));
 		
 		modificarArray(numbers);
 		
@@ -32,9 +32,8 @@ public class Ejercicio2 {
 			}
 		}
 		
-		System.out.println("Array cambiado: ");
-		numbers.toString();
-		
+		System.out.println("Array cambiado: " + Arrays.toString(numbers));
+
 	}
 
 }
