@@ -1,4 +1,5 @@
 package ejercicios4_1ArraysParametros;
+import java.util.*;
 
 public class Ejercicio1 {
 
@@ -12,9 +13,24 @@ public class Ejercicio1 {
 	}
 	
 	public void show() {
-		System.out.println(add(2,2,2)); //Llama al metodo add con un varargs de numeros
+		@SuppressWarnings("resource")
+		Scanner kb= new Scanner(System.in);
+		int length, value;
+		int [] numbers;
 		
+		System.out.println("¿Cuántos números quieres multiplicar?");
+		length= kb.nextInt();
 		
+		numbers= new int [length];
+		
+		for(int i=0; i< length; i++) { //Le pide numeros al usuario
+			System.out.printf("Introduce un numero para la posición %d\n", i+1);
+			value= kb.nextInt();
+			numbers[i]= value;
+			
+		}
+		
+		System.out.println("El resultado es: " + add(numbers)); //Llama al metodo add con un varargs de numeros
 	}
 	
 	public int add(int... nums) { //El metodo trata el vararg como un array normal
