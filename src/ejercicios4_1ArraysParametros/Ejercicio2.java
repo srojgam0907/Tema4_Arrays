@@ -24,7 +24,7 @@ public class Ejercicio2 {
 		
 	}
 	
-	public void modificarArray(int[] numbers) {
+	public void modificarArray(int[] numbers) { //Le suma 1 al elemento que sea impar
 		for(int i=0; i< numbers.length; i++) {
 			if(numbers[i] %2 != 0){
 				numbers[i]++;
