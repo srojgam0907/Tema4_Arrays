@@ -12,7 +12,28 @@ public class Ejercicio5 {
 	}
 	
 	public void show() {
+		int[] numbers = null;
+		
+		histograma(numbers);
+	}
+	
+	public void histograma(int[] numbers) {
+		numbers= new int[] {6, 4, 4, 1, 9, 7, 5, 6, 4, 2, 3, 9, 5, 6, 4};
+		
+		for(int i=0; i<numbers.length; i++) {
+			
+		}
 		
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
