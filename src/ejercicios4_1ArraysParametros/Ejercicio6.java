@@ -19,6 +19,14 @@ public class Ejercicio6 {
 		
 		capicuo= esCapicuo(numCapicuo);
 		
+		if(capicuo) {
+			System.out.println("El numero es capicuo");
+			
+		} else {
+			System.out.println("El numero no es capicuo");
+			
+		}
+		
 	}
 	
 	public boolean esCapicuo(int[] numCapicuo) {
