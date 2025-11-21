@@ -13,19 +13,18 @@ public class Ejercicio2 {
 	}
 	
 	public void show() {
-		int[] numbers= {4,2,8,9,3};
-		System.out.println(Arrays.toString(numbers));
+		int[] array= {4,2,8,9,3};
+		System.out.println(Arrays.toString(array));
 		
-		reverse(numbers);
-		System.out.println(Arrays.toString(numbers));
+		System.out.println(Arrays.toString(reverse(array)));
 	}
 	
-	public int[] reverse(int[] numbers) {
+	public int[] reverse(int[] array) { 
+		int[] array2= new int [array.length];
 		
 		
 		
-		
-		return 0;
+		return array2;
 	}
 
 }
