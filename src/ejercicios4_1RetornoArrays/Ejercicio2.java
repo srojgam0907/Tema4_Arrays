@@ -1,4 +1,5 @@
 package ejercicios4_1RetornoArrays;
+import java.util.Arrays;
 
 public class Ejercicio2 {
 
@@ -12,7 +13,19 @@ public class Ejercicio2 {
 	}
 	
 	public void show() {
+		int[] numbers= {4,2,8,9,3};
+		System.out.println(Arrays.toString(numbers));
 		
+		reverse(numbers);
+		System.out.println(Arrays.toString(numbers));
+	}
+	
+	public int[] reverse(int[] numbers) {
+		
+		
+		
+		
+		return 0;
 	}
 
 }
