@@ -25,7 +25,7 @@ public class Ejercicio1 {
 		int position= 0;
 		
 		length= enterLength(length, kb);
-		caracteres= new char [length];
+		caracteres= new char [length+1];
 		caracteres= enterCaracteres(caracteres, kb);
 		caracter= enterCaracter(caracter, kb);
 		position= enterPosition(position, kb);
@@ -34,7 +34,8 @@ public class Ejercicio1 {
 		
 	}
 	
-	public int enterLength(int length, Scanner kb) {
+	//Pedir la longitud del array 
+	public int enterLength(int length, Scanner kb) { 
 		do {
 			System.out.println("Introduce la longitud de la lista, tiene que ser mayor a 1");
 			length= kb.nextInt();
@@ -48,9 +49,16 @@ public class Ejercicio1 {
 		return length; 
 	}
 	
-	public char[] enterCaracteres(char[] caracteres, Scanner kb) {
+	//Rellena el array caracteres hasta la longitud dicha por el usuario
+	public char[] enterCaracteres(char[] caracteres, Scanner kb) { 
+		char value=0;
+		int i=0;
 		
+		for(i=0; i<=caracteres.length-2; i++) {
+			System.out.println("Introduce un caracter");
+			value= kb.next().charAt(0);		}
 		
+			caracteres[i]= value; 
 		
 		return caracteres;
 	}
