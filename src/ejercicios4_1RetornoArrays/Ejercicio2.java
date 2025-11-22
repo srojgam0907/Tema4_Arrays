@@ -22,9 +22,9 @@ public class Ejercicio2 {
 		array= new int[length];
 		enterValues(array, kb);
 		
-		System.out.println(Arrays.toString(array));
+		System.out.printf("Array 1: %s%n\n", Arrays.toString(array));
 		
-		System.out.println(Arrays.toString(reverse(array, kb)));
+		System.out.printf("Array invertido: %s%n\n", Arrays.toString(reverse(array)));
 	}
 	
 	//Introduce la longitud del array
@@ -45,12 +45,19 @@ public class Ejercicio2 {
 	
 	//Introduce los valores del array
 	public void enterValues(int[] array, Scanner kb) {
+		int value=0;
 		
-		
-	}
+		for(int i=0; i<array.length-1; i++) {
+			System.out.printf("Introduce un numero para la posición %d", i+1);
+			value= kb.nextInt();
+			
+			array[i]=value;
+			
+		}
+	} 
 	
 	//Introduce los valores de array invirtidos en el array2
-	public int[] reverse(int[] array, Scanner kb) { 
+	public int[] reverse(int[] array) { 
 		int[] array2= new int [array.length];
 		
 		
