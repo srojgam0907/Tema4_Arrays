@@ -30,8 +30,11 @@ public class Ejercicio1 {
 		caracter= enterCaracter(caracter, kb);
 		position= enterPosition(position, length, kb);
 		
-		switchCaracteres(caracteres, caracter, position);
+		System.out.println(Arrays.toString(caracteres)); //Sin añadir el caracter nuevo
 		
+		switchCaracteres(caracteres, caracter, position, length);
+		
+		System.out.println(Arrays.toString(caracteres)); //Con el caracter nuevo añadido
 	}
 	
 	//Pedir la longitud del array 
@@ -87,10 +90,17 @@ public class Ejercicio1 {
 		return position; 
 	}
 	
-	public void switchCaracteres(char[] caracteres, char caracter, int position) { 
+	public void switchCaracteres(char[] caracteres, char caracter, int position, int length) { 
 		
-		
-		
+		for(int i=0; i<position-1; i++) {
+			if(i == position-1) {
+				caracteres[i]=caracter;
+				
+			} else {
+				caracteres[caracteres.length-1-i]= caracteres[length-i];
+				
+			}
+		} 
 	}
 	
 }
