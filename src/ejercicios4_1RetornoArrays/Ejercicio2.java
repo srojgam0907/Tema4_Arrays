@@ -56,7 +56,7 @@ public class Ejercicio2 {
 		}
 	} 
 	
-	//Introduce los valores de array invertidos en el array2
+	//Introduce los valores de array invertidos en el array2 
 	public int[] reverse(int[] array) { 
 		int[] array2= new int [array.length];
 		
