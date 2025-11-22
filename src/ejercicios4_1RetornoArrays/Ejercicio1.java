@@ -34,7 +34,7 @@ public class Ejercicio1 {
 		
 		switchCaracteres(caracteres, caracter, position, length);
 		
-		System.out.println(Arrays.toString(caracteres)); //Con el caracter nuevo añadido
+		System.out.printf("\nCon el cambio\n%s%n",Arrays.toString(caracteres)); //Con el caracter nuevo añadido
 	}
 	
 	//Pedir la longitud del array 
@@ -57,12 +57,15 @@ public class Ejercicio1 {
 		char value=0;
 		int i=0;
 		
+		System.out.println("Usted insertará caracteres en la lista");
+		
 		for(i=0; i<=caracteres.length-2; i++) {
 			System.out.println("Introduce un caracter");
-			value= kb.next().charAt(0);		}
-		
+			value= kb.next().charAt(0);	
+			
 			caracteres[i]= value; 
-		
+		}
+
 		return caracteres;
 	}
 	
@@ -80,27 +83,26 @@ public class Ejercicio1 {
 			System.out.println("¿En qué posición quieres introducir ese caracter?");
 			position= kb.nextInt();
 			
-			if(position > length) { 
-				System.out.printf("Posicion fuera de rango. Tiene que ser menor a %d", length);
+			if(position > length || position < 0) { 
+				System.out.printf("Posicion fuera de rango. Tiene que ser menor a %d y mayor a 0", length);
 			}
 			
-		}while(position > length);
+		}while(position > length || position < 0);
 		
 		
 		return position; 
 	}
 	
+	//Cambia el orden de los caracteres incluyendo el caracter nuevo en la posicion pedida
 	public void switchCaracteres(char[] caracteres, char caracter, int position, int length) { 
 		
-		for(int i=0; i<position-1; i++) {
-			if(i == position-1) {
-				caracteres[i]=caracter;
+		for(int i=caracteres.length-1; i>position-1; i--) {
+			
+				caracteres[i]= caracteres[i-1];
 				
-			} else {
-				caracteres[caracteres.length-1-i]= caracteres[length-i];
-				
-			}
 		} 
+		
+		caracteres[position-1]=caracter; 
 	}
 	
 }
