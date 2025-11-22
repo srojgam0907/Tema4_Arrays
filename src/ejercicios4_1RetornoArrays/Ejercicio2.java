@@ -18,30 +18,39 @@ public class Ejercicio2 {
 		int[] array;
 		int length=0;
 		
-		length=enterLength(length);
+		length=enterLength(length, kb);
 		array= new int[length];
-		enterValues(array);
+		enterValues(array, kb);
 		
 		System.out.println(Arrays.toString(array));
 		
-		System.out.println(Arrays.toString(reverse(array)));
+		System.out.println(Arrays.toString(reverse(array, kb)));
 	}
 	
 	//Introduce la longitud del array
-	public int enterLength(int length) {
+	public int enterLength(int length, Scanner kb) {
 		
+		do {
+			System.out.println("Introduce una longitud, mayor o igual 2");
+			length= kb.nextInt();
+			
+			if(length < 2) {
+				System.out.println("ERROR numero fuera de rango"); 
+			}
+			
+		} while(length < 2);
 		
 		return length;
 	}
 	
 	//Introduce los valores del array
-	public void enterValues(int[] array) {
+	public void enterValues(int[] array, Scanner kb) {
 		
 		
 	}
 	
 	//Introduce los valores de array invirtidos en el array2
-	public int[] reverse(int[] array) { 
+	public int[] reverse(int[] array, Scanner kb) { 
 		int[] array2= new int [array.length];
 		
 		
