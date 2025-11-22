@@ -22,21 +22,30 @@ public class Ejercicio1 {
 		char[] caracteres;
 		char caracter = 0; 
 		int length = 0;
+		int position= 0;
 		
 		length= enterLength(length, kb);
 		caracteres= new char [length];
 		caracteres= enterCaracteres(caracteres, kb);
 		caracter= enterCaracter(caracter, kb);
+		position= enterPosition(position, kb);
 		
-		switchCaracteres(caracteres, caracter);
+		switchCaracteres(caracteres, caracter, position);
 		
 	}
 	
 	public int enterLength(int length, Scanner kb) {
+		do {
+			System.out.println("Introduce la longitud de la lista, tiene que ser mayor a 1");
+			length= kb.nextInt();
+			
+			if(length<=1) {
+				System.out.println("ERROR");
+			}
 		
+		} while(length<=1);
 		
-		
-		return 0;
+		return length; 
 	}
 	
 	public char[] enterCaracteres(char[] caracteres, Scanner kb) {
@@ -53,7 +62,14 @@ public class Ejercicio1 {
 		return 'a';
 	}
 	
-	public void switchCaracteres(char[] caracteres, char caracter) {
+	public int enterPosition(int position, Scanner kb) {
+		
+		
+		
+		return 0;
+	}
+	
+	public void switchCaracteres(char[] caracteres, char caracter, int position) { 
 		
 		
 		
