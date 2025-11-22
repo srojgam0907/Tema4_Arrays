@@ -28,7 +28,7 @@ public class Ejercicio1 {
 		caracteres= new char [length+1];
 		caracteres= enterCaracteres(caracteres, kb);
 		caracter= enterCaracter(caracter, kb);
-		position= enterPosition(position, kb);
+		position= enterPosition(position, length, kb);
 		
 		switchCaracteres(caracteres, caracter, position);
 		
@@ -65,17 +65,26 @@ public class Ejercicio1 {
 	
 	//Pedir el caracter que se introducirá en el array
 	public char enterCaracter(char caracter, Scanner kb) {
-		System.out.println("Elige un caracter");
+		System.out.println("Elige un caracter que se introducirá en el array");
 		caracter= kb.next().charAt(0);
 		
 		return caracter; 
 	}
 	
-	public int enterPosition(int position, Scanner kb) {
+	//Pedir la posicion para el caracter teniendo en cuenta la longitud dicha por el usuario
+	public int enterPosition(int position, int length, Scanner kb) {
+		do{
+			System.out.println("¿En qué posición quieres introducir ese caracter?");
+			position= kb.nextInt();
+			
+			if(position > length) { 
+				System.out.printf("Posicion fuera de rango. Tiene que ser menor a %d", length);
+			}
+			
+		}while(position > length);
 		
 		
-		
-		return 0;
+		return position; 
 	}
 	
 	public void switchCaracteres(char[] caracteres, char caracter, int position) { 
