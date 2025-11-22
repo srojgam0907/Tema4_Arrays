@@ -60,7 +60,7 @@ public class Ejercicio2 {
 	public int[] reverse(int[] array) { 
 		int[] array2= new int [array.length];
 		
-		for(int i=0; i<array.length-1; i++) {
+		for(int i=0; i<array.length; i++) { 
 			array2[i]=array[array.length-1-i];
 			
 		}
