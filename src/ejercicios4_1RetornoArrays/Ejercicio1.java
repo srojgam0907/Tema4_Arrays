@@ -18,38 +18,39 @@ public class Ejercicio1 {
 	}
 	
 	public void show() {
+		Scanner kb= new Scanner(System.in);
 		char[] caracteres;
 		char caracter = 0; 
 		int length = 0;
 		
-		caracter= enterCaracter(caracter);
-		length= enterLength(length);
+		length= enterLength(length, kb);
 		caracteres= new char [length];
-		caracteres= enterCaracteres(caracteres);
+		caracteres= enterCaracteres(caracteres, kb);
+		caracter= enterCaracter(caracter, kb);
 		
 		switchCaracteres(caracteres, caracter);
 		
 	}
 	
-	public char enterCaracter(char caracter) {
-		
-		
-		
-		return 'a';
-	}
-	
-	public int enterLength(int length) {
+	public int enterLength(int length, Scanner kb) {
 		
 		
 		
 		return 0;
 	}
-
-	public char[] enterCaracteres(char[] caracteres) {
+	
+	public char[] enterCaracteres(char[] caracteres, Scanner kb) {
 		
 		
 		
 		return caracteres;
+	}
+	
+	public char enterCaracter(char caracter, Scanner kb) {
+		System.out.println("");
+		
+		
+		return 'a';
 	}
 	
 	public void switchCaracteres(char[] caracteres, char caracter) {
@@ -57,4 +58,5 @@ public class Ejercicio1 {
 		
 		
 	}
+	
 }
