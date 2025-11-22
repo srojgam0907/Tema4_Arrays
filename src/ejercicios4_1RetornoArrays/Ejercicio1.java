@@ -32,7 +32,7 @@ public class Ejercicio1 {
 		
 		System.out.println(Arrays.toString(caracteres)); //Sin añadir el caracter nuevo
 		
-		switchCaracteres(caracteres, caracter, position, length);
+		switchCaracteres(caracteres, caracter, position);
 		
 		System.out.printf("\nCon el cambio\n%s%n",Arrays.toString(caracteres)); //Con el caracter nuevo añadido
 	}
@@ -94,7 +94,7 @@ public class Ejercicio1 {
 	}
 	
 	//Cambia el orden de los caracteres incluyendo el caracter nuevo en la posicion pedida
-	public void switchCaracteres(char[] caracteres, char caracter, int position, int length) { 
+	public void switchCaracteres(char[] caracteres, char caracter, int position) { 
 		
 		for(int i=caracteres.length-1; i>position-1; i--) {
 			
