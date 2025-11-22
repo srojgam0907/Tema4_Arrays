@@ -17,23 +17,28 @@ public class Ejercicio5 {
 		histograma(numbers);
 	}
 	
-	public void histograma(int[] nums) { //Cambiar nombre a numbers 
+	public void histograma(int[] numbers) {  
 		int max=0;
 		int[] count= new int[10];
 		
-		for(int n : nums) {  
+		/*El bucle recorre todos los elementos de numbers y en cada vuelta n se 
+		 *iguala al valor de la posicion de numbers en esa vuelta.
+		 *Se verifica que el elemento este entre 0 y 9 y count en la posicion n 
+		 *se incrementa en 1.
+		 *EJEMPLO: en la posicion 0 numbers es 6, count en la posicion 6 se incrementa*/
+		for(int n : numbers) {  
 			if(n >=0 && n <=9) {
 				count[n]++;
 			}
 		}
 		
-		for(int f : count) {
+		for(int f : count) { //Busca el máximo
 			if(f > max) {
 				max= f;
 			}
 		}
 		
-		for(int nivel= max; nivel>0; nivel--) {
+		for(int nivel= max; nivel>0; nivel--) { //Dibujas el histograma
 			for(int i=0; i<count.length; i++) {
 				if(count[i] >= nivel) {
 					System.out.print("* ");
@@ -46,8 +51,9 @@ public class Ejercicio5 {
 		}
 		
 		for(int i=0; i<10; i++) {
-			
+			System.out.print(i + " ");
 		}
+		System.out.println();
 		
 	}
 
