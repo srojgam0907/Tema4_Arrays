@@ -63,11 +63,12 @@ public class Ejercicio1 {
 		return caracteres;
 	}
 	
+	//Pedir el caracter que se introducirá en el array
 	public char enterCaracter(char caracter, Scanner kb) {
-		System.out.println("");
+		System.out.println("Elige un caracter");
+		caracter= kb.next().charAt(0);
 		
-		
-		return 'a';
+		return caracter; 
 	}
 	
 	public int enterPosition(int position, Scanner kb) {
