@@ -50,6 +50,12 @@ public class Ejercicio4 {
 		return array;
 	}
 	
+	public int[] reverse(int[] array) { //funcion recursiva
+		
+		
+		
+		return array;
+	}
 	
 
 }
