@@ -20,8 +20,7 @@ public class Ejercicio3 {
 		
 		System.out.println(Arrays.toString(array));
 		
-		arrayOrder(array);
-		
+		System.out.println(Arrays.toString(arrayOrder(array)));
 		
 	}
 	
@@ -47,19 +46,21 @@ public class Ejercicio3 {
 		return array;
 	}
 	
-	public void arrayOrder(int [] array) {
+	public int[] arrayOrder(int [] array) {
 		int value= 0;
 		
-		for(int i=0; i<array.length; i++) {
-			for(int j=0; j<array.length; j++) {
-				if(array[j] > array[j+1]) {
+		for(int i=0; i<array.length-1; i++) {
+			for(int j=0; j<array.length-1; j++) {
+				if(array[j] > array[j+1]) { //Lo ordena con el método burbuja
 					value= array[j+1];
 					array[j+1]= array[j];
 					array[j]= value;
 				}
 			}
+			//System.out.printf("Cambio %d: %s%n\n", i+1, Arrays.toString(array));
 		}
 		
+		return array;
 		
 	}
 }
