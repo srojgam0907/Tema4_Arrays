@@ -13,6 +13,15 @@ public class Ejercicio3 {
 	}
 	
 	public void show() {
+		int[][] matriz= {{1,2,3,4},{2,5,6,7},{3,6,8,9},{4,7,9,10}};
+		
+		matrizCuadrada(matriz);
+		
+	}
+	
+	public void matrizCuadrada(int[][] matriz) {
+		
+		
 		
 	}
 
