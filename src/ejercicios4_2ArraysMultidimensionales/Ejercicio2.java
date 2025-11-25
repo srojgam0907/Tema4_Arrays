@@ -12,7 +12,7 @@ public class Ejercicio2 {
 	}
 	
 	public void show() {
-		int numMayor=0;
+		double numMayor=0;
 		double [][][] matriz= { // matriz [2]capas [2]filas [3]columnas 
 			{ //capa 0
 				{3.14, 7.82, 0.56},
@@ -27,14 +27,23 @@ public class Ejercicio2 {
 		
 		numMayor= highElement(matriz);
 		
-		System.out.printf("En esa matriz el numero más grande es %d", numMayor);
+		System.out.printf("En esa matriz el numero más grande es %.2f", numMayor);
 		
 	}
 	
-	public int highElement(double[][][] matriz) { 
-		int mayor=0;
+	public double highElement(double[][][] matriz) { 
+		double mayor=0.0;
 		
-		
+		for(int i=0; i<matriz.length; i++) {
+			for(int j=0; j<matriz[i].length; j++) {
+				for(int k=0; k<matriz[i][j].length; k++) {
+					if(matriz[i][j][k] > mayor) { 
+						mayor= matriz[i][j][k];
+						
+					}
+				}
+			}
+		}
 		
 		return mayor;
 	}
