@@ -51,10 +51,12 @@ public class Ejercicio4 {
 	}
 	
 	public int[] reverse(int[] array) { //funcion recursiva
+		int[] array2= new int [array.length];
 		
 		
 		
-		return array;
+		
+		return array2;
 	}
 	
 
