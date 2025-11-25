@@ -21,7 +21,18 @@ public class Ejercicio1 {
 	}
 	
 	public void show() {
-		int[][] matriz= new int [3][3]; 
+		int[][] matriz= {{1,2,3,4},{2,5,6,7},{3,6,8,9},{4,7,9,10}}; 
+		boolean simetrico;
+		
+		simetrico= symmetrical(matriz);
+		
+		if(simetrico) {
+			System.out.println("La matriz es simétrica");
+			
+		} else {
+			System.out.println("La matriz no es simétrica");
+			
+		}
 	}
 	
 	public int[][] enterLength(int[][] matriz) {
@@ -48,8 +59,8 @@ public class Ejercicio1 {
 		
 	}
 	
-	public boolean symmetrical() {
-		boolean simetrico=false;
+	public boolean symmetrical(int [][] matriz) {
+		boolean simetrico=false; 
 		
 		
 		
