@@ -62,7 +62,17 @@ public class Ejercicio1 {
 	public boolean symmetrical(int [][] matriz) {
 		boolean simetrico=false; 
 		
-		
+		for(int i=0; i<matriz.length; i++) {
+			for(int j=0; j<matriz.length; j++) {
+				if(matriz[i][j] == matriz[j][i]) { 
+					simetrico= true;
+					
+				} else {
+					return false;
+					
+				}
+			}
+		}
 		
 		return simetrico;
 	}
