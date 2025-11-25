@@ -37,7 +37,7 @@ public class Ejercicio2 {
 		for(int i=0; i<matriz.length; i++) {
 			for(int j=0; j<matriz[i].length; j++) {
 				for(int k=0; k<matriz[i][j].length; k++) {
-					if(matriz[i][j][k] > mayor) { 
+					if(matriz[i][j][k] > mayor) { //Busca el mayor y actualiza la variable
 						mayor= matriz[i][j][k];
 						
 					}
