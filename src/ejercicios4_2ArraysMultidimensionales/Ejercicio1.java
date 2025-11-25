@@ -1,5 +1,7 @@
 package ejercicios4_2ArraysMultidimensionales;
 
+import java.util.Scanner;
+
 public class Ejercicio1 {
 
 	public static void main(String[] args) {
@@ -19,7 +21,39 @@ public class Ejercicio1 {
 	}
 	
 	public void show() {
+		int[][] matriz= new int [3][3]; 
+	}
+	
+	public int[][] enterLength(int[][] matriz) {
+		@SuppressWarnings("resource")
+		Scanner kb= new Scanner(System.in);
+		int row=0, col=0; //Filas y columnas
 		
+		do {
+			System.out.println("¿Cuántas filas tiene la matriz?");
+			row= kb.nextInt();
+			
+			System.out.println("¿Cuántas columnas tiene la matriz");
+			col= kb.nextInt();
+			
+			if(row != col) {
+				System.out.println("ERROR. Filas y columnas tienen que ser iguales");
+			}
+			
+		} while(row != col);
+		
+		matriz= new int[row][col];
+		
+		return matriz;
+		
+	}
+	
+	public boolean symmetrical() {
+		boolean simetrico=false;
+		
+		
+		
+		return simetrico;
 	}
 
 }
