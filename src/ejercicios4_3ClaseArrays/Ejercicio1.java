@@ -17,7 +17,6 @@ public class Ejercicio1 {
 	
 	public void show() {
 		int[][] array= {{1, 2, 3}, {4, 5, 6}};
-		
 		int[][] newArray= duplicateColumn(array);
 		
 		for(int[] fila : newArray) {
@@ -27,15 +26,15 @@ public class Ejercicio1 {
 	}
 	
 	public int[][] duplicateColumn(int[][] array) {
-		int filas = array.length;
+		int filas = array.length; //lo iguala al numero de filas del array
 	    int[][] array2 = new int[filas][];
 	    int originalNumCol= 0;
 	    int newNumCol= 0; 
 		
-	    for (int i= 0; i < filas; i++) {
-            originalNumCol = array[i].length;
-            newNumCol = originalNumCol * 2;
-            array2[i] = Arrays.copyOf(array[i], newNumCol);
+	    for (int i= 0; i < filas; i++) { //Recorre las filas del array
+            originalNumCol = array[i].length; //Lo iguala al numero de columnas de la fila i
+            newNumCol = originalNumCol * 2; //Lo duplica
+            array2[i] = Arrays.copyOf(array[i], newNumCol); //Copia el mismo array con el nuevo numero de columnas en la fila i
         }
 		
 		return array2;
