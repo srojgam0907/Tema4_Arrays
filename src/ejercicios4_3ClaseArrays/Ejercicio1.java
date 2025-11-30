@@ -18,27 +18,27 @@ public class Ejercicio1 {
 	public void show() {
 		int[][] array= {{1, 2, 3}, {4, 5, 6}};
 		
-		System.out.printf("Nuevo array: %s%n", Arrays.toString(duplicateColumn(array)));
+		int[][] newArray= duplicateColumn(array);
+		
+		for(int[] fila : newArray) {
+			System.out.println(Arrays.toString(fila));
+		}
 		
 	}
 	
 	public int[][] duplicateColumn(int[][] array) {
-		int[][] array2; 
+		int filas = array.length;
+	    int[][] array2 = new int[filas][];
+	    int originalNumCol= 0;
+	    int newNumCol= 0; 
 		
-		
-		
+	    for (int i= 0; i < filas; i++) {
+            originalNumCol = array[i].length;
+            newNumCol = originalNumCol * 2;
+            array2[i] = Arrays.copyOf(array[i], newNumCol);
+        }
 		
 		return array2;
 	}
 
 }
-
-
-
-
-
-
-
-
-
-
