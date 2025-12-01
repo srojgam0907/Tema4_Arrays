@@ -15,10 +15,11 @@ public class Ejercicio4 {
 	
 	public void show() {
 		int[] array= enterValues();
+		int index= 0;
 		
 		System.out.printf("Array 1: %s%n\n", Arrays.toString(array));
 		
-		System.out.printf("Array invertido: %s%n\n", Arrays.toString(reverse(array)));
+		System.out.printf("Array invertido: %s%n\n", Arrays.toString(reverse(array, index)));
 	}
 	
 	public int[] enterValues() {
@@ -50,11 +51,17 @@ public class Ejercicio4 {
 		return array;
 	}
 	
-	public int[] reverse(int[] array) { //funcion recursiva
+	public int[] reverse(int[] array, int index) { //funcion recursiva
 		int[] array2= new int [array.length];
 		
+		if(array.length == index) { //caso base
+			return array2;
+			
+		}
+		//Se copia el elemento
+		System.arraycopy(array, index, array2, array.length-1-index, 1);
 		
-		
+		array2= reverse(array, index+1);
 		
 		return array2;
 	}
