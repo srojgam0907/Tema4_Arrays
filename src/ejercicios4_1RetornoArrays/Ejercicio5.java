@@ -16,14 +16,14 @@ public class Ejercicio5 {
 	}
 	
 	public void show() {
-		double[] array= enterValues();
-		
+		@SuppressWarnings("resource")
+		Scanner kb= new Scanner(System.in);
+		double[] array= enterValues(kb);
+		double num= enterNumber(kb);
 		
 	}
 	
-	public double[] enterValues() {
-		@SuppressWarnings("resource")
-		Scanner kb= new Scanner(System.in);
+	public double[] enterValues(Scanner kb) {
 		int length= 0;
 		double[] array;
 		double value= 0.0;
@@ -48,6 +48,15 @@ public class Ejercicio5 {
 		}
 		
 		return array;
+	}
+	
+	public double enterNumber(Scanner kb) {
+		double num= 0;
+		
+		System.out.printf("Introduce el numero decimal que quieras buscar");
+		num= kb.nextDouble();
+		
+		return num; 
 	}
 
 }
