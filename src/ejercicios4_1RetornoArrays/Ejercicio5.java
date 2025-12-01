@@ -21,6 +21,8 @@ public class Ejercicio5 {
 		double[] array= enterValues(kb);
 		double num= enterNumber(kb);
 		
+		buscarDecimal(array, num);
+		
 	}
 	
 	public double[] enterValues(Scanner kb) {
@@ -57,6 +59,13 @@ public class Ejercicio5 {
 		num= kb.nextDouble();
 		
 		return num; 
+	}
+	
+	public int buscarDecimal(double[] array, double num) {
+		int posicion= 0;
+		
+		
+		return posicion;
 	}
 
 }
