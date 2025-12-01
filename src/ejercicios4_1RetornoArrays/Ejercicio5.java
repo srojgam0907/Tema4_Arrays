@@ -16,17 +16,17 @@ public class Ejercicio5 {
 	}
 	
 	public void show() {
-		int[] array= enterValues();
+		double[] array= enterValues();
 		
 		
 	}
 	
-	public int[] enterValues() {
+	public double[] enterValues() {
 		@SuppressWarnings("resource")
 		Scanner kb= new Scanner(System.in);
 		int length= 0;
-		int[] array;
-		int value= 0;
+		double[] array;
+		double value= 0.0;
 		
 		do {
 			System.out.println("Introduce una longitud, mayor o igual 2");
@@ -38,11 +38,11 @@ public class Ejercicio5 {
 			
 		} while(length < 2); //La longitud del array no puede ser < 2 
 		
-		array= new int [length]; //Inicializa la longitud del array
+		array= new double [length]; //Inicializa la longitud del array
 		 
 		for(int i=0; i< array.length; i++) { //Rellena los valores del array
-			System.out.printf("Introduce un valor para la posicion %d\n", i+1);
-			value= kb.nextInt();
+			System.out.printf("Introduce un valor decimal para la posicion %d\n", i+1);
+			value= kb.nextDouble();
 			
 			array[i]= value;
 		}
