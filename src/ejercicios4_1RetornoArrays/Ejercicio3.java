@@ -47,17 +47,17 @@ public class Ejercicio3 {
 	}
 	
 	public int[] arrayOrder(int [] array) {
-		int value= 0;
+		int aux= 0;
 		
 		for(int i=0; i<array.length-1; i++) {
 			for(int j=0; j<array.length-1-i; j++) { //Para evitar comparaciones innecesarias
 				if(array[j] > array[j+1]) { //Lo ordena de menor a mayor con el método burbuja
-					value= array[j+1];
+					aux= array[j+1];
 					array[j+1]= array[j];
-					array[j]= value;
+					array[j]= aux;
 				}
 			}
-			//System.out.printf("Cambio %d: %s%n\n", i+1, Arrays.toString(array));
+			System.out.printf("Cambio %d: %s\n", i+1, Arrays.toString(array));
 		}
 		
 		return array;
