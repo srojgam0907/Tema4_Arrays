@@ -66,5 +66,26 @@ public class Ejercicio4 {
 		return array2;
 	}
 	
+	/*public int[] reverse(int[] a) {
+		
+		int[] arrayAux;
+		int[] reversedArray = new int[a.length];
+			// Casos base:
+		 	// - Array par: array vacío
+		 	// - Array impar: array con un 1 elemento
+		 
+		if(a.length==0 || a.length==1) {
+			return a;
+		} else {//Caso recursivo
+			reversedArray[0]=a[a.length-1];
+			reversedArray[reversedArray.length-1]=a[0];
+			arrayAux = Arrays.copyOfRange(a, 1, a.length-1);
+			arrayAux = reverse(arrayAux);
+			System.arraycopy(arrayAux, 0, reversedArray, 1, arrayAux.length);
+			return reversedArray;
+		}
+		
+	}*/
+	
 
 }
