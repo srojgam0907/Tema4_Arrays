@@ -1,5 +1,7 @@
 package ejercicios4_1ArraysParametros;
 
+import java.util.Arrays;
+
 public class Ejercicio6 {
 
 	public static void main(String[] args) {
@@ -30,10 +32,16 @@ public class Ejercicio6 {
 	}
 	
 	public boolean esCapicuo(int[] num) { 
-		
-		
-		
-		return false;
+		if(num.length == 0 || num.length == 1) {//Casos base: si llega al final (es par o impar) devuelve true
+			return true;
+			
+		} else if(num[0] != num[num.length -1]) { //si son distintos devuelve false
+			return false;
+			
+		} else {
+			return esCapicuo(Arrays.copyOfRange(num, 1, num.length -1));//Caso recursivo: se vuelve a llamar sin el primero y sin el último
+		}
+
 	}
 	
 	
