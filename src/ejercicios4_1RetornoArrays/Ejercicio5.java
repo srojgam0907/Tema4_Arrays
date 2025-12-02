@@ -1,5 +1,6 @@
 package ejercicios4_1RetornoArrays;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Ejercicio5 {
@@ -18,54 +19,54 @@ public class Ejercicio5 {
 	public void show() {
 		@SuppressWarnings("resource")
 		Scanner kb= new Scanner(System.in);
-		double[] array= enterValues(kb);
-		double num= enterNumber(kb);
+		float[] array= {1.9f, 2.9f, 3.4f, 5.1f, 6.2f, 7.0f, 8.2f, 9.4f, 10.7f, 12.6f, 15.2f};
+		float num= enterNumber(kb);
 		
-		buscarDecimal(array, num);
+		System.out.printf("%d", buscarDecimal(array, num, 0));
 		
 	}
 	
-	public double[] enterValues(Scanner kb) {
-		int length= 0;
-		double[] array;
-		double value= 0.0;
+	public float enterNumber(Scanner kb) {
+		float num= 0;
 		
-		do {
-			System.out.println("Introduce una longitud, mayor o igual 2");
-			length= kb.nextInt();
-			
-			if(length < 2) {
-				System.out.println("ERROR numero fuera de rango"); 
-			}
-			
-		} while(length < 2); //La longitud del array no puede ser < 2 
-		
-		array= new double [length]; //Inicializa la longitud del array
-		 
-		for(int i=0; i< array.length; i++) { //Rellena los valores del array
-			System.out.printf("Introduce un valor decimal para la posicion %d\n", i+1);
-			value= kb.nextDouble();
-			
-			array[i]= value;
-		}
-		
-		return array;
-	}
-	
-	public double enterNumber(Scanner kb) {
-		double num= 0;
-		
-		System.out.printf("Introduce el numero decimal que quieras buscar");
-		num= kb.nextDouble();
+		System.out.printf("Introduce el numero decimal que quieras buscar\n");
+		num= kb.nextFloat();
 		
 		return num; 
 	}
 	
-	public int buscarDecimal(double[] array, double num) {
-		int posicion= 0;
+	public int buscarDecimal(float[] array, float num, int counter) {
+		int result;
 		
+		if(array.length/2==0) {
+			return -1;
+			
+		} else if(num >= array[array.length/2]) {
+			if(num == array[array.length/2]) {
+				result= array.length/2;
+				return result+=counter;
+				
+			} else {
+				result = array.length / 2; 
+				counter+=Math.ceil(result)+1;
+				return buscarDecimal(Arrays.copyOfRange(array, (array.length/2)+1, array.length), num, counter);
+			}
+			
+		} else {
+			return buscarDecimal(Arrays.copyOfRange(array, 0, (array.length/2)), num, counter);
+		}
 		
-		return posicion;
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
